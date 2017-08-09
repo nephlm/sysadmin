@@ -1,6 +1,25 @@
 export PATH="/home/tkuster/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if hash pyenv 2>/dev/null; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+    echo "pyenv"
+else
+    echo "no pyenv"
+    function pyenv 
+    {
+        echo " "
+    }
+fi
+
+if hash __git_ps1 2>/dev/null; then
+    echo "git installed"
+else
+    echo "git not installed"
+    function __git_ps1 
+    {
+        echo " "
+    }
+fi
 
 PROMPT_COMMAND=__prompt_command
 
