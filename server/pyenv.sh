@@ -9,7 +9,7 @@ PY_VERSION = 3.5.1
 INSTALL_DIR=/opt
 GITHUB=https://github.com
 
-sudo apt-get install curl git-core gcc make zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libssl-dev curl -y
+sudo apt-get install curl git gcc make zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libssl-dev libffi-dev -y
 
 curl -L https://raw.github.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
