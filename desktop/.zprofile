@@ -1,5 +1,7 @@
 autoload -Uz compinit && compinit
 
+alias ll="ls -lh"
+
 export PATH="/opt/homebrew/bin:$PATH"
 
 export PYENV_ROOT="$HOME/.pyenv"
